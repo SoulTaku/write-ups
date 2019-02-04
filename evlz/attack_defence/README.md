@@ -13,7 +13,7 @@ Besides ssh and tls traffic there are some interesting tcp packets sending some 
 
 I wanted to get all those packets in order to analyze them more in-depth so i opend scapy and filtered the packets that were communicationg on port 4445 since the communication took place on that port.
 
-```
+```python
 >>> packets = rdpcap('log2.pcapng')                                                                                                          
 >>> pkts = PacketList() 
 ...: for p in packets: 
@@ -40,7 +40,7 @@ Hmm, this is interesting. So we know the address of system, let's search for the
 
 Final exploit:
 
-```
+```python
 #!/usr/bin/env python2
 # -*- coding: utf-8 -*-
 from pwn import *

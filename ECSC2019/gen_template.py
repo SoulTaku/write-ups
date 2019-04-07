@@ -29,4 +29,4 @@ template = f'''
 >* <detailed explanation>
 '''
 
-open(args.name + '.md', 'w').write(template)
+open(args.name.replace(' ', '_') + '.md', 'w').write(template)
